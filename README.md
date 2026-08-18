@@ -8,6 +8,11 @@ Este repositório instala o código-fonte do repositório
 [`macbtools`](https://github.com/macbservices/macbtools) — você vai informar a URL desse
 repositório durante a instalação.
 
+> **Quer testar antes numa VM local (VirtualBox) usando seu próprio domínio via
+> Cloudflare Tunnel, sem precisar de VPS ainda?** Veja o guia
+> [`TESTE_LOCAL.md`](./TESTE_LOCAL.md) e use o script `install_local` em vez do
+> `install_primaria`.
+
 ## Antes de começar
 
 ### 1. Servidor
