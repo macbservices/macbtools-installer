@@ -5,7 +5,7 @@ usuário **root** habilitado. Instala e configura tudo do zero: Node.js 20, Post
 Redis (via Docker), Nginx, SSL (Certbot/Let's Encrypt), backend e frontend.
 
 Este repositório instala o código-fonte do repositório
-[`macbtools`](https://github.com/SEU_USUARIO/macbtools) — você vai informar a URL desse
+[`macbtools`](https://github.com/macbservices/macbtools) — você vai informar a URL desse
 repositório durante a instalação.
 
 ## Antes de começar
@@ -52,7 +52,7 @@ apt install -y git
 ### 3. Clonar este repositório (o instalador) na VPS
 ```bash
 cd /root
-git clone https://github.com/SEU_USUARIO/macbtools-installer.git
+git clone https://github.com/macbservices/macbtools-installer.git
 cd macbtools-installer
 chmod +x install_primaria install_instancia
 ```
@@ -79,7 +79,7 @@ chmod +x install_primaria install_instancia
 
 **Formato da URL do repositório**, se ele for privado:
 ```
-https://SEU_USUARIO:SEU_TOKEN@github.com/SEU_USUARIO/macbtools.git
+https://macbservices:SEU_TOKEN@github.com/macbservices/macbtools.git
 ```
 
 A partir daqui o script roda sozinho — leva de 10 a 20 minutos. Ele instala
