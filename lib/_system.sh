@@ -15,9 +15,15 @@ system_create_user() {
   sleep 2
 
   sudo su - root <<EOF
-  useradd -m -p $(openssl passwd -crypt ${mysql_root_password}) -s /bin/bash -G sudo deploy
-  usermod -aG sudo deploy
+  useradd -m -s /bin/bash -G sudo deploy
+  echo "deploy:${mysql_root_password}" | chpasswd
 EOF
+
+  if ! id deploy >/dev/null 2>&1; then
+    printf "${WHITE} ❌ ERRO: o usuário 'deploy' não foi criado. Abortando a instalação.${GRAY_LIGHT}"
+    printf "\n\n"
+    exit 1
+  fi
 
   sleep 2
 }
@@ -283,8 +289,6 @@ system_node_install() {
   sudo su - root <<EOF
   curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
   apt-get install -y nodejs
-  sleep 2
-  npm install -g npm@latest
   sleep 2
   sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
   wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
