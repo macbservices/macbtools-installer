@@ -81,6 +81,22 @@ get_redis_port() {
   read -p "> " redis_port
 }
 
+get_license_secret() {
+
+  print_banner
+  printf "${WHITE} 💻 [Opcional] Cole o LICENSE_SECRET (deixe em branco e aperte Enter se não usar licença):${GRAY_LIGHT}"
+  printf "\n\n"
+  read -p "> " license_secret
+}
+
+get_license_key() {
+
+  print_banner
+  printf "${WHITE} 💻 [Opcional] Cole o LICENSE_KEY dessa instalação (deixe em branco se não usar licença):${GRAY_LIGHT}"
+  printf "\n\n"
+  read -p "> " license_key
+}
+
 get_empresa_delete() {
   
   print_banner
@@ -166,6 +182,8 @@ get_urls() {
   get_frontend_port
   get_backend_port
   get_redis_port
+  get_license_secret
+  get_license_key
 }
 
 software_update() {

@@ -45,6 +45,15 @@ system_git_clone() {
   git clone ${link_git} /home/deploy/${instancia_add}/
 EOF
 
+  # Segurança: remove o token/credencial embutido na URL remota do git,
+  # pra não deixar ele salvo em texto puro no .git/config do servidor.
+  # A cópia do código já foi feita; não precisamos mais do acesso remoto
+  # com credenciais depois disso.
+  sudo su - deploy <<EOF
+  cd /home/deploy/${instancia_add}/
+  git remote remove origin 2>/dev/null || true
+EOF
+
   sleep 2
 }
 

@@ -79,6 +79,9 @@ USER_LIMIT=${max_user}
 CONNECTIONS_LIMIT=${max_whats}
 CLOSED_SEND_BY_ME=true
 
+LICENSE_SECRET=${license_secret}
+LICENSE_KEY=${license_key}
+
 [-]EOF
 EOF
 
