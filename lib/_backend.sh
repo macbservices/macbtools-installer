@@ -81,6 +81,7 @@ CLOSED_SEND_BY_ME=true
 
 LICENSE_SECRET=${license_secret}
 LICENSE_KEY=${license_key}
+LICENSE_PANEL_URL=${license_panel_url}
 
 [-]EOF
 EOF

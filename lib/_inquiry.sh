@@ -97,6 +97,14 @@ get_license_key() {
   read -p "> " license_key
 }
 
+get_license_panel_url() {
+
+  print_banner
+  printf "${WHITE} 💻 [Opcional] URL do seu Painel de Licenças (ex: https://painel.seudominio.com — deixe em branco pra checagem só offline, sem revogação remota):${GRAY_LIGHT}"
+  printf "\n\n"
+  read -p "> " license_panel_url
+}
+
 get_empresa_delete() {
   
   print_banner
@@ -184,6 +192,7 @@ get_urls() {
   get_redis_port
   get_license_secret
   get_license_key
+  get_license_panel_url
 }
 
 software_update() {

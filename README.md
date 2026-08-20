@@ -142,6 +142,7 @@ chmod +x install_primaria install_instancia
 | Porta do REDIS                                       | Um valor entre `5000` e `5999`, ex: `5000`                            |
 | LICENSE_SECRET (opcional)                            | Cole aqui, ou deixe em branco se não usar licença                      |
 | LICENSE_KEY (opcional)                               | Cole a chave gerada no Painel de Licenças pra esse cliente             |
+| LICENSE_PANEL_URL (opcional)                         | A URL do seu Painel de Licenças (permite revogação remota — veja Configurações no painel) |
 
 > Envie pro cliente (ou preencha você mesmo, se administrar o servidor) as
 > duas últimas linhas já preenchidas — assim ele não precisa editar nenhum
