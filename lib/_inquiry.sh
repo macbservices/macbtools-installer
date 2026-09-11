@@ -5,7 +5,7 @@ get_mysql_root_password() {
   print_banner
   printf "${WHITE} 💻 Insira senha para o usuario Deploy e Banco de Dados (Não utilizar caracteres especiais):${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " mysql_root_password
+  read -r -p "> " mysql_root_password
 }
 
 get_link_git() {
@@ -13,7 +13,7 @@ get_link_git() {
   print_banner
   printf "${WHITE} 💻 Insira o link do GITHUB do MacbTools que deseja instalar:${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " link_git
+  read -r -p "> " link_git
 }
 
 get_instancia_add() {
@@ -21,7 +21,7 @@ get_instancia_add() {
   print_banner
   printf "${WHITE} 💻 Informe um nome para a Instancia/Empresa que será instalada (Não utilizar espaços ou caracteres especiais, Utilizar Letras minusculas; ):${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " instancia_add
+  read -r -p "> " instancia_add
 }
 
 get_max_whats() {
@@ -29,7 +29,7 @@ get_max_whats() {
   print_banner
   printf "${WHITE} 💻 Informe a Qtde de Conexões/Whats que a ${instancia_add} poderá cadastrar:${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " max_whats
+  read -r -p "> " max_whats
 }
 
 get_max_user() {
@@ -37,7 +37,7 @@ get_max_user() {
   print_banner
   printf "${WHITE} 💻 Informe a Qtde de Usuarios/Atendentes que a ${instancia_add} poderá cadastrar:${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " max_user
+  read -r -p "> " max_user
 }
 
 get_frontend_url() {
@@ -45,7 +45,7 @@ get_frontend_url() {
   print_banner
   printf "${WHITE} 💻 Digite o domínio do FRONTEND/PAINEL para a ${instancia_add}:${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " frontend_url
+  read -r -p "> " frontend_url
 }
 
 get_backend_url() {
@@ -53,7 +53,7 @@ get_backend_url() {
   print_banner
   printf "${WHITE} 💻 Digite o domínio do BACKEND/API para a ${instancia_add}:${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " backend_url
+  read -r -p "> " backend_url
 }
 
 get_frontend_port() {
@@ -61,7 +61,7 @@ get_frontend_port() {
   print_banner
   printf "${WHITE} 💻 Digite a porta do FRONTEND para a ${instancia_add}; Ex: 3000 A 3999 ${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " frontend_port
+  read -r -p "> " frontend_port
 }
 
 
@@ -70,7 +70,7 @@ get_backend_port() {
   print_banner
   printf "${WHITE} 💻 Digite a porta do BACKEND para esta instancia; Ex: 4000 A 4999 ${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " backend_port
+  read -r -p "> " backend_port
 }
 
 get_redis_port() {
@@ -78,7 +78,7 @@ get_redis_port() {
   print_banner
   printf "${WHITE} 💻 Digite a porta do REDIS/AGENDAMENTO MSG para a ${instancia_add}; Ex: 5000 A 5999 ${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " redis_port
+  read -r -p "> " redis_port
 }
 
 get_license_secret() {
@@ -86,7 +86,7 @@ get_license_secret() {
   print_banner
   printf "${WHITE} 💻 [Opcional] Cole o LICENSE_SECRET (deixe em branco e aperte Enter se não usar licença):${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " license_secret
+  read -r -p "> " license_secret
 }
 
 get_license_key() {
@@ -94,7 +94,7 @@ get_license_key() {
   print_banner
   printf "${WHITE} 💻 [Opcional] Cole o LICENSE_KEY dessa instalação (deixe em branco se não usar licença):${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " license_key
+  read -r -p "> " license_key
 }
 
 get_license_panel_url() {
@@ -102,7 +102,7 @@ get_license_panel_url() {
   print_banner
   printf "${WHITE} 💻 [Opcional] URL do seu Painel de Licenças (ex: https://painel.seudominio.com — deixe em branco pra checagem só offline, sem revogação remota):${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " license_panel_url
+  read -r -p "> " license_panel_url
 }
 
 get_empresa_delete() {
@@ -110,7 +110,7 @@ get_empresa_delete() {
   print_banner
   printf "${WHITE} 💻 Digite o nome da Instancia/Empresa que será Deletada (Digite o mesmo nome de quando instalou):${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " empresa_delete
+  read -r -p "> " empresa_delete
 }
 
 get_empresa_atualizar() {
@@ -118,7 +118,7 @@ get_empresa_atualizar() {
   print_banner
   printf "${WHITE} 💻 Digite o nome da Instancia/Empresa que deseja Atualizar (Digite o mesmo nome de quando instalou):${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " empresa_atualizar
+  read -r -p "> " empresa_atualizar
 }
 
 get_empresa_bloquear() {
@@ -126,7 +126,7 @@ get_empresa_bloquear() {
   print_banner
   printf "${WHITE} 💻 Digite o nome da Instancia/Empresa que deseja Bloquear (Digite o mesmo nome de quando instalou):${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " empresa_bloquear
+  read -r -p "> " empresa_bloquear
 }
 
 get_empresa_desbloquear() {
@@ -134,7 +134,7 @@ get_empresa_desbloquear() {
   print_banner
   printf "${WHITE} 💻 Digite o nome da Instancia/Empresa que deseja Desbloquear (Digite o mesmo nome de quando instalou):${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " empresa_desbloquear
+  read -r -p "> " empresa_desbloquear
 }
 
 get_empresa_dominio() {
@@ -142,7 +142,7 @@ get_empresa_dominio() {
   print_banner
   printf "${WHITE} 💻 Digite o nome da Instancia/Empresa que deseja Alterar os Dominios (Atenção para alterar os dominios precisa digitar os 2, mesmo que vá alterar apenas 1):${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " empresa_dominio
+  read -r -p "> " empresa_dominio
 }
 
 get_alter_frontend_url() {
@@ -150,7 +150,7 @@ get_alter_frontend_url() {
   print_banner
   printf "${WHITE} 💻 Digite o NOVO domínio do FRONTEND/PAINEL para a ${empresa_dominio}:${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " alter_frontend_url
+  read -r -p "> " alter_frontend_url
 }
 
 get_alter_backend_url() {
@@ -158,7 +158,7 @@ get_alter_backend_url() {
   print_banner
   printf "${WHITE} 💻 Digite o NOVO domínio do BACKEND/API para a ${empresa_dominio}:${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " alter_backend_url
+  read -r -p "> " alter_backend_url
 }
 
 get_alter_frontend_port() {
@@ -166,7 +166,7 @@ get_alter_frontend_port() {
   print_banner
   printf "${WHITE} 💻 Digite a porta do FRONTEND da Instancia/Empresa ${empresa_dominio}; A porta deve ser o mesma informada durante a instalação ${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " alter_frontend_port
+  read -r -p "> " alter_frontend_port
 }
 
 
@@ -175,7 +175,7 @@ get_alter_backend_port() {
   print_banner
   printf "${WHITE} 💻 Digite a porta do BACKEND da Instancia/Empresa ${empresa_dominio}; A porta deve ser o mesma informada durante a instalação ${GRAY_LIGHT}"
   printf "\n\n"
-  read -p "> " alter_backend_port
+  read -r -p "> " alter_backend_port
 }
 
 
@@ -237,7 +237,7 @@ inquiry_options() {
   printf "   [4] Desbloquear MacbTools\n"
   printf "   [5] Alter. dominio MacbTools\n"
   printf "\n"
-  read -p "> " option
+  read -r -p "> " option
 
   case "${option}" in
     0) get_urls ;;
